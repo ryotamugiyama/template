@@ -59,9 +59,16 @@
 \chapter{あとがき}
 ありがとうございました．
 
-%参考文献（bibtex不使用で，手動で入力する場合）
-\begin{thebibliography}{99}
+%参考文献（bibtex不使用で，手動で入力する場合．字下げの形式は『社会学評論スタイルガイド』にしたがっている）
+\def\bibindent{1.85em}
+\begin{thebibliography}{99\kern\bibindent}
+\makeatletter
+\def\@biblabel#1{}
+\let\old@bibitem\bibitem
+\def\bibitem#1{\old@bibitem{#1}\leavevmode\kern-\bibindent}
+\makeatother
+\small
 \bibitem{}
-盛山和夫，1995，『制度論の構図』創文社．
+Granovetter, Mark. 1973. ``The Strength of Weak Ties." \textit{American Journal of Sociology} 78(6): 1360--80.
 \end{thebibliography}
 \end{document}
